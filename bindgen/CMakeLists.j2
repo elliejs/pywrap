@@ -5,7 +5,6 @@ project( {{ name }}
 enable_language( C )
 
 find_package( Python REQUIRED COMPONENTS Development Interpreter )
-find_package( MPI QUIET )
 find_package( VTK REQUIRED
   COMPONENTS
     WrappingPythonCore
@@ -14,6 +13,8 @@ find_package( VTK REQUIRED
     CommonDataModel
     CommonExecutionModel
     freetype
+  OPTIONAL_COMPONENTS
+    mpi
 )
 find_package( pybind11 REQUIRED )
 find_package( OpenCASCADE REQUIRED )
