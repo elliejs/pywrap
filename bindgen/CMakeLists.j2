@@ -2,8 +2,10 @@ cmake_minimum_required( VERSION 3.16 )
 project( {{ name }}
          LANGUAGES CXX )
 
+enable_language( C )
 
-find_package( Python REQUIRED COMPONENTS Development Interpreter)
+find_package( Python REQUIRED COMPONENTS Development Interpreter )
+find_package( MPI QUIET )
 find_package( VTK REQUIRED
   COMPONENTS
     WrappingPythonCore
